@@ -8,8 +8,34 @@
     <title>Ejercicio 1</title>
 </head>
 <body>
+    <!--navbar-->
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Teorema Pitágoras</span>
+        </div>
+    </nav>
 
-    <button class="btn btn-outline-primary"> Aceptar </button>
-    
+    <!--form-->
+    <div class="container mt-3">
+        <!-- mt margin-top -->
+        <div class="row">
+            <div class="col-4">
+                <div class="mb-3">
+                    <label class="form.label">Cateto Opuesto</label>
+                    <input id="inp_co" class="form-control" type="text" placeholder="Ingrese C.O">
+                </div>
+                <div class="mb-3">
+                    <label class="form.label">Cateto Adyacente</label>
+                    <input id="inp_ca" class="form-control" type="text" placeholder="Ingrese C.A">
+                </div>
+                <button id="btn_calcular" class="btn btn-primary"> Aceptar </button>
+            </div>
+            <div class="col-8">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
