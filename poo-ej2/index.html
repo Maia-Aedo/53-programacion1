@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO Ejercicio 2</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Navbar</span>
+        </div>
+    </nav>
+    <!-- container -->
+    <div class="container mt-3">
+        <div class="row">
+            <!-- input y boton-->
+            <div class="col-6">
+                <div class="mb-3">
+                    <label class="form-label">Ingrese Base Superior</label>
+                    <i><input id="inp_bs" type="number" class="form-control" placeholder="Ingrese la base superior"></i>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ingrese Base Inferior</label>
+                    <i><input id="inp_bi" type="number" class="form-control" placeholder="Ingrese la base inferior"></i>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Ingrese Altura</label>
+                    <i><input id="inp_h" type="number" class="form-control" placeholder="Ingrese la altura"></i>
+                </div>
+                <button type="button" id="btn_calcular" class="btn btn-success">Calcular</button>
+            </div>
+            <!-- respuesta -->
+            <div class="col-6">
+                <h3 id="respuesta">  </h3>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
