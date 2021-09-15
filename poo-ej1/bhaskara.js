@@ -22,3 +22,4 @@ export default class Bhaskara {
         return r2;
     }
 }
+
