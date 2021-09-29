@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase ej1</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">Navbar</span>
+        </div>
+    </nav>
+    <!-- container -->
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-4">
+                <div class="mb-3">
+                    <label class="form-label"> Nombre </label>
+                    <input id="inp_nom" type="text" class="form-control" placeholder="Ingrese nombre">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"> Apellido </label>
+                    <input id="inp_ap" type="text" class="form-control" placeholder="Ingrese apellido">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label"> DNI </label>
+                    <input id="inp_dni" type="number" class="form-control" placeholder="Ingrese dni">
+                </div>
+            </div>
+            <div class="col-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> Nombre </th>
+                            <th> Apellido </th>
+                            <th> DNI </th>
+                            <th> Accion </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- onclick="guardar_cliente" -->
+        <button id= "btn_guardar" class="btn btn-secondary"> Guardar cliente </button>
+    </div>
+    <!-- cargamos librerias -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- nos conectamos con firebase -->
+    <script src="firebase.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
