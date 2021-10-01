@@ -43,7 +43,8 @@ const listar_clientes = async () => {
                 <td>${element.apellido}</td>
                 <td>${element.dni}</td>
                 <td>
-                    <button class="btn btn-danger btn-sm">X</button>
+                    <button onclick="eliminar_cliente('${element.id}')" class="btn btn-primary btn-sm"><i class="fa fa-trash-o"></i></button>
+                    <button onclick="llenar_formulario('${element.nombre}', '${element.apellido}', ${element.dni}), '${element.id}'" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button>
                 </td>
             </tr>
         `
@@ -55,3 +56,32 @@ const listar_clientes = async () => {
 }
 // llamar o ejecutar la funcion encargada de listar
 listar_clientes();
+function eliminar_cliente(id) {
+    db.collection("clientes").doc(id).delete();
+    listar_clientes();
+}
+// onclick solo con funciones clase, no funciones flecha 
+function llenar_formulario(nom, ap, dni, id) {
+    document.getElementById("inp_nom").value = nom;
+    document.getElementById("inp_ap").value = ap;
+    document.getElementById("inp_dni").value = dni;
+    document.getElementById("inp_id").value = id;
+    document.getElementById("btn_guardar").style.display = 'none';
+    document.getElementById("btn_actualizar").style.display = 'block';
+}
+function actualizar_cliente () {
+    const nom = document.getElementById("inp_nom").value
+    const ap = document.getElementById("inp_ap").value
+    const dni = document.getElementById("inp_dni").value
+    const id = document.getElementById("inp_id").value
+    const clienteActualizado = {
+        nombre : nom,
+        apellido : ap,
+        dni : dni,
+    }
+    'none' = document.getElementById("btn_guardar").style.display
+    'block' = document.getElementById("btn_actualizar").style.display
+    db.collection("clientes").doc(id).update(clienteActualizado);
+    listar_clientes();
+    vaciar();
+}
